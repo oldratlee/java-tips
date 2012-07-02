@@ -1,16 +1,17 @@
 package com.oldratlee.innerclass.serialization;
 
+import com.oldratlee.innerclass.com.oldratlee.innerclass.serialization.Util;
 import org.junit.Test;
 
 import java.io.Serializable;
 
 public class StaticInnerClassSerializationTest {
 
-    interface GetDataInterface extends Serializable {
+    interface FooInterface3 extends Serializable {
         public Object getData();
     }
 
-    static GetDataInterface getData = new GetDataInterface() {
+    static FooInterface3 getData = new FooInterface3() {
         private static final long serialVersionUID = 1L;
 
         public Object getData() {
@@ -18,7 +19,7 @@ public class StaticInnerClassSerializationTest {
         }
     };
 
-    public static class ClassImplSerialize implements Serializable {
+    public static class FooClass3 implements Serializable {
         private static final long serialVersionUID = 88940079192401092L;
     }
 
@@ -29,7 +30,7 @@ public class StaticInnerClassSerializationTest {
 
     @Test
     public void testSerializable_StaticInnerClass() throws Exception {
-        ClassImplSerialize data = new ClassImplSerialize();
+        FooClass3 data = new FooClass3();
         Util.writeObject(data);
     }
 }

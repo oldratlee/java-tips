@@ -1,16 +1,17 @@
 package com.oldratlee.innerclass.serialization;
 
+import com.oldratlee.innerclass.com.oldratlee.innerclass.serialization.Util;
 import junit.framework.TestCase;
 
 import java.io.Serializable;
 
 public class StaticClassSerialization_JUnit3_Test extends TestCase {
     
-    interface GetDataInterface extends Serializable {
+    interface FooInterface2 extends Serializable {
         public Object getData();
     }
 
-    static GetDataInterface getData = new GetDataInterface() {
+    static FooInterface2 getData = new FooInterface2() {
         private static final long serialVersionUID = 1L;
 
         public Object getData() {
@@ -18,7 +19,7 @@ public class StaticClassSerialization_JUnit3_Test extends TestCase {
         }
     };
     
-    public static class ClassImplSerialize implements Serializable {
+    public static class FooClass2 implements Serializable {
         private static final long serialVersionUID = 88940079192401092L;
     }
     
@@ -27,7 +28,7 @@ public class StaticClassSerialization_JUnit3_Test extends TestCase {
     }
 
     public static void testSerializable_LocalVar_StaticAnonymousClass() throws Exception {
-        GetDataInterface local = new GetDataInterface() {
+        FooInterface2 local = new FooInterface2() {
             private static final long serialVersionUID = 1L;
             public Object getData() {
                 return null;
@@ -38,7 +39,7 @@ public class StaticClassSerialization_JUnit3_Test extends TestCase {
     }
     
     public void testSerializable_StaticInnerClass() throws Exception {
-        ClassImplSerialize data = new ClassImplSerialize();
+        FooClass2 data = new FooClass2();
         Util.writeObject(data);
     }
 }

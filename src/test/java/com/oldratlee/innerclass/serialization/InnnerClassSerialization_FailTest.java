@@ -1,21 +1,22 @@
 package com.oldratlee.innerclass.serialization;
+import com.oldratlee.innerclass.com.oldratlee.innerclass.serialization.Util;
 import org.junit.Test;
 
 import java.io.Serializable;
 
 public class InnnerClassSerialization_FailTest {
-    interface GetDataInterface extends Serializable {
+    interface FooInterface1 extends Serializable {
         public Object getData();
     }
 
-    GetDataInterface attributeData = new GetDataInterface() {
+    FooInterface1 attributeData = new FooInterface1() {
            private static final long serialVersionUID = 1L;
            public Object getData() {
                return null;
            }
        };
 
-    public class InnerClassSerialize implements Serializable {
+    public class FooClass1 implements Serializable {
         private static final long serialVersionUID = 1L;
     }
     
@@ -26,7 +27,7 @@ public class InnnerClassSerialization_FailTest {
     
     @Test
     public void testSerializable_LocalVar_AnonymousClass() throws Exception {
-        GetDataInterface local = new GetDataInterface() {
+        FooInterface1 local = new FooInterface1() {
             private static final long serialVersionUID = 1L;
             public Object getData() {
                 return null;
@@ -38,7 +39,7 @@ public class InnnerClassSerialization_FailTest {
 
     @Test
     public void testSerializable_InnerClass() throws Exception {
-        InnerClassSerialize data = new InnerClassSerialize();
+        FooClass1 data = new FooClass1();
         Util.writeObject(data);
     }
 }
