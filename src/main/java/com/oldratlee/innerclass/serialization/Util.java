@@ -1,4 +1,4 @@
-package com.oldratlee.innerclass.com.oldratlee.innerclass.serialization;
+package com.oldratlee.innerclass.serialization;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

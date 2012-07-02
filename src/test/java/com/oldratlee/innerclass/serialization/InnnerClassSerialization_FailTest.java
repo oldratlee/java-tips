@@ -1,5 +1,4 @@
 package com.oldratlee.innerclass.serialization;
-import com.oldratlee.innerclass.com.oldratlee.innerclass.serialization.Util;
 import org.junit.Test;
 
 import java.io.Serializable;
