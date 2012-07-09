@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.oldratlee</groupId>
-	<artifactId>inner-class-demo</artifactId>
+	<artifactId>java-tips</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>${project.artifactId}</name>
@@ -76,8 +76,8 @@
 		</dependency>
 	</dependencies>
 	<scm>
-		<url>https://bitbucket.org/oldrat/inner-class-demo</url>
-		<connection>scm:hg:https://oldrat@bitbucket.org/oldrat/inner-class-demo</connection>
+		<url>https://bitbucket.org/oldrat/java-tips</url>
+		<connection>scm:hg:https://bitbucket.org/oldrat/java-tips</connection>
 	</scm>
 	<build>
 		<plugins>
