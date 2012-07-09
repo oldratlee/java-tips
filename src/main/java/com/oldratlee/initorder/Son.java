@@ -20,10 +20,14 @@ public class Son extends Father {
     };
 
     public Son() {
-        super();
+        super(); // 这是缺省构造函数，可以省略这一行
         System.out.println("Run Son Constructor!");
     }
 
+    /**
+     * Explanation:
+     * http://oldratlee.com/576/tech/java/java-object-initialization-order.html
+     */
     public static void main(String[] args) {
         new Son();
     }

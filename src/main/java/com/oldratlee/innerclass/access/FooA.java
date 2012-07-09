@@ -1,4 +1,4 @@
-package com.oldratlee.innerclass.serialization;
+package com.oldratlee.innerclass.access;
 
 public class FooA {
     private int attrib;
